@@ -1,0 +1,10 @@
+<ul class="list-group list-group-horizontal p-1">
+  <li *ngIf="!estalogado()" class="list-group-item c-pointer" (click)="cambiarPantalla('login')" [ngClass]="{'active': router.url === '/login'}">Login</li>
+  <li *ngIf="estalogado()" class="list-group-item btn-secondary c-pointer" (click)="logout()" [ngClass]="{'active': router.url === '/login'}">Log out</li>
+  <li class="list-group-item c-pointer" (click)="cambiarPantalla('altaUsuario')" [ngClass]="{'active': router.url === '/altaUsuario'}">Alta</li>
+  <li class="list-group-item c-pointer" (click)="cambiarPantalla('usuarios')" [ngClass]="{'active': router.url === '/usuarios'}">Listado</li>
+</ul>
+<app-mensajes></app-mensajes>
+<div class="aplicacion-contenedor d-flex justify-content-center align-items-center">
+  <router-outlet></router-outlet>
+</div>

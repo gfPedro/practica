@@ -1,0 +1,7 @@
+<div class="fixed-top d-flex justify-content-around m-2">
+  <div class="w-25"></div>
+  <div *ngIf="_mensaje" class="alert alert-danger w-25 d-flex justify-content-between">
+    <span class="w-75">{{_mensaje}}</span>
+    <em (click)="cerrar()" class="bi bi-x-circle-fill ml-2"></em>
+  </div>
+</div>

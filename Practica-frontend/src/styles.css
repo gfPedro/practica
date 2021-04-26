@@ -1,0 +1,16 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~bootstrap-icons/font/bootstrap-icons.css";
+
+.c-pointer {
+  cursor: pointer !important;
+}
+.f-l {
+  float: left !important;
+}
+.w-50-vw {
+  width: 50vw !important;
+}
+.aplicacion-contenedor {
+  height: 90vh !important;
+  overflow: auto;
+}

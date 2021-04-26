@@ -1,0 +1,34 @@
+<div class="d-flex flex-column shadow p-3 mb-5 bg-white rounded w-50-vw">
+  <div class="d-flex justify-content-center p-2">
+    <h1>Alta de usuarios</h1>
+  </div>
+  <div class="d-flex justify-content-center p-2">
+    <input [formControl]="nombre" class="w-75 form-control" type="text" placeholder="Nombre">
+  </div>
+  <div *ngIf="nombre.dirty && nombre.errors" class="d-flex justify-content-center">
+    <span *ngIf="nombre.errors.required" class="alert alert-danger w-75">El nombre es obligatorio</span>
+  </div>
+  <div class="d-flex justify-content-center p-2">
+    <input [formControl]="edad" class="w-75 form-control" type="number" placeholder="Edad">
+  </div>
+  <div *ngIf="edad.dirty && edad.errors" class="d-flex justify-content-center">
+    <span *ngIf="edad.errors.required" class="alert alert-danger w-75">La edad es obligatoria</span>
+  </div>
+  <div class="d-flex justify-content-center p-2">
+    <input [formControl]="email" class="w-75 form-control" type="text" placeholder="Email">
+  </div>
+  <div *ngIf="email.dirty && email.errors" class="d-flex justify-content-center">
+    <span *ngIf="email.errors.required" class="alert alert-danger w-75">El email es obligatorio</span>
+    <span *ngIf="email.errors.email" class="alert alert-danger w-75">Introduzca un email válido</span>
+  </div>
+  <div class="d-flex justify-content-center p-2">
+    <input [formControl]="contrasenia" class="w-75 form-control" type="password" placeholder="Contraseña">
+  </div>
+  <div *ngIf="contrasenia.dirty && contrasenia.errors" class="d-flex justify-content-center">
+    <span *ngIf="contrasenia.errors.required" class="alert alert-danger w-75">La contraseña es obligatoria</span>
+  </div>
+  <div class="d-flex justify-content-end p-2">
+    <button class="w-25 btn btn-link" (click)="cambiarPantalla('login')">Login</button>
+    <button class="w-25 btn btn-primary" (click)="crear()">Guardar</button>
+  </div>
+</div>
